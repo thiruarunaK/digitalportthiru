@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url('img7.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        header {
+            background-color: #3a7811a9;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        #button-container {
+            text-align: center;
+        }
+        .btn {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #7bbb20;
+            color: #281616;
+            font-weight: bold;
+            border: none;
+            border-radius: 20px 20px;
+            cursor: pointer;
+           font-size: 30px;
+            transition: background-color 0.3s;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #0fd35b;
+        }
+        #basic-details {
+            display: none;
+            text-align: center;
+           
+        }
+        #education-details {
+            display: none;
+            text-align: center;
+            
+            
+        }
+        .center-table {
+            margin: 0 auto;
+            background-color: #f2f2f2;
+            width: 30%;
+        }
+        .center-table1 {
+            margin: 0 auto;
+            background-color: #f2f2f2;
+            width: 50%;
+        }
+        th,td {
+            padding: 8px;
+            border: 3px solid green;
+            font-weight: bold;
+        }
+        h1 {
+            color: #064b15;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Me :)</h1>
+    </header>
+    <div id="button-container">
+        <br><br>
+        <button class="btn" id="show-basic-details" > Basic Details</button>
+        <button class="btn" id="show-education-details"> Educational Details</button>
+    </div>
+    <div id="basic-details">
+        <h1 >BASIC DETAILS</h1>
+        <table class="center-table" >
+           
+            <tr>
+                <td>Name</td>
+                <td>
+                    S.Thirumurugan
+                </td>
+            </tr>
+            <tr>
+                <td>Father's Name</td>
+                <td>
+                    C.Subramaniyan
+                </td>
+            </tr>
+            <tr>
+                <td>Mother's's Name</td>
+                <td>
+                   S.Naburani
+                </td>
+            </tr>
+            <tr>
+                <td>Date of Birth</td>
+                <td>
+                    23/11/2003
+                </td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td>
+                    20
+                    </td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>
+                    97,Thangavel Street,
+                    Veerappan chattram,
+                    Erode - 680004.
+                    </td>
+            </tr>
+        </table>
+    </div>
+    <div id="education-details">
+        <h1 >EDUCATIONAL DETAILS</h1>
+        <table class="center-table1" >
+            <tr>
+                <td>Degree</td>
+                <td>
+                   <p> B.Sc (Information Technology)</p>
+                    at Sri Vasavi Collge(SFW),Erode
+                </td>
+                <td>
+                   87% (upto 5th sem)
+                </td>
+            </tr>
+            <tr>
+                <td>HSC</td>
+                <td>
+                    <P>Government Higher Secondary School,</P>
+                    at Rameswaram.
+                <td>
+                89%
+                </td>
+            </tr>
+            <tr>
+                <td>SSLC</td>
+                <td>
+                    <P>Government Higher Secondary School,</P>
+                    at Rameswaram.
+                </td>
+            <td>
+            88%
+            </tr>
+            </tr>
+            
+        </table>
+    </div>
+
+    <script>
+        const showBasicDetailsBtn = document.getElementById('show-basic-details');
+        const showEducationDetailsBtn = document.getElementById('show-education-details');
+        const basicDetails = document.getElementById('basic-details');
+        const educationDetails = document.getElementById('education-details');
+
+        showBasicDetailsBtn.addEventListener('click', () => {
+            basicDetails.style.display = 'block';
+            educationDetails.style.display = 'none';
+            showBasicDetailsBtn.style.display = 'none';
+            showEducationDetailsBtn.style.display = 'block';
+        });
+
+        showEducationDetailsBtn.addEventListener('click', () => {
+            basicDetails.style.display = 'none';
+            educationDetails.style.display = 'block';
+            showBasicDetailsBtn.style.display = 'block';
+            showEducationDetailsBtn.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
